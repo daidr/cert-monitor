@@ -1,0 +1,8 @@
+{
+  "name": "cert-monitor",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "daidr",
+  "homepage": "https://github.com/daidr/cert-monitor"
+}

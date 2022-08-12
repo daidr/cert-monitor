@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{EXpageTitle}}</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <section class="header">
+            <div class="container">
+                <h1 class="header-title">{{EXpageTitle}}</h1>
+                <div class="card">
+                    <div class="summary">
+                        <div id="status" class="icon icon-status-sum {{status}}"></div>
+                        <div style="letter-spacing:-0.5px;">
+                            <div class="summary-detail">{{statusText}}</div>
+                            <div class="summary-checktime">Last check at {{statusUpdateTime}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="content">
+            <div class="container monitors-container">
+                {{preRenderNodes}}
+            </div>
+        </section>
+        <section class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <nav class="links">
+                        {{footerLinkNodes}}
+                    </nav>
+                    <div class="copyright">{{footerCopyright}}</div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        const SourceData = __sourceData__;
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
