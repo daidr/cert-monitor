@@ -7,6 +7,5 @@ WORKDIR /app
 COPY . .
 
 ## done
-USER node
 
 CMD echo "Cert Monitor Image." && node index.js

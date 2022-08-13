@@ -9,8 +9,10 @@ services:
     environment:
       - TZ=Asia/Shanghai
     volumes:
-      - ./config.js:/app/config.js
       - ./static:/app/static
+      - type: bind
+        source: ./config.js
+        target: /app/config.js
     networks:
       - app-network
     restart: always
