@@ -12,6 +12,16 @@ try {
 }
 const fs = require("fs");
 
+// 如果 static 目录不存在，则创建
+if (!fs.existsSync('./static')) {
+    fs.mkdirSync('./static');
+}
+
+// 将 ./src/frontend/* 文件夹下的所有文件复制到 ./static/* 文件夹
+fs.readdirSync('./src/frontend').forEach((file) => {
+    fs.copyFileSync(`./src/frontend/${file}`, `./static/${file}`);
+});
+
 const Cert = (cert) => {
     const valid_from = new Date(cert.valid_from);
     const valid_to = new Date(cert.valid_to);
