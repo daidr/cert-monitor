@@ -4,7 +4,7 @@ services:
 
   app:
     container_name: cert-monitor
-    image: timochan/cert-monitor:latest
+    image: daidr/cert-monitor:latest
     command: node index.js
     environment:
       - TZ=Asia/Shanghai
