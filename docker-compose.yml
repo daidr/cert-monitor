@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+
+  app:
+    container_name: cert-monitor
+    image: daidr/cert-monitor:latest
+    command: node index.js
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./static:/app/static
+      - type: bind
+        source: ./config.js
+        target: /app/config.js
+    networks:
+      - app-network
+    restart: always
+
+
+networks:
+  app-network:
+    driver: bridge
