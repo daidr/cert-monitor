@@ -13,7 +13,7 @@ Cert Monitor 能够监控不同网站的证书，并将结果输出为 html 文�
 ```bash
 wget https://fastly.jsdelivr.net/gh/daidr/cert-monitor@main/config.example.js -O config.js
 ```
-2. 从本仓库西在 docker-compose.yml 
+2. 从本仓库下载 docker-compose.yml 
 
 ```bash
 wget https://fastly.jsdelivr.net/gh/daidr/cert-monitor@main/docker-compose.yml
