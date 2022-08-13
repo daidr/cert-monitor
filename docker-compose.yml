@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+
+  app:
+    container_name: cert-monitor
+    build:
+      context: timochan/cert-monitor:latest
+    command: node index.js
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config.js:/app/config.js
+      - ./static:/app/static
+    networks:
+      - app-network
+    restart: always
+
+
+networks:
+  app-network:
+    driver: bridge
